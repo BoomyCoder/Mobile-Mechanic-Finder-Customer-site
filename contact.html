@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Mobile Mechanic Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="all-mechanics.html">All Mechanics</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>We're here to help! Call, email, or send us a message below.</p>
+  </header>
+
+  <section>
+    <h2>Call or Email</h2>
+    <p><strong>Phone:</strong> <a href="tel:2166002694">(216-600-2694)</a></p>
+    <p><strong>Email:</strong> <a href="mailto:5c8e35682fbd55bbe24c102c4e48c800">MobileMechanicFinder</a></p>
+  </section>
+
+  <section>
+    <h2>Send a Message</h2>
+    <form action="https://formsubmit.co/5c8e35682fbd55bbe24c102c4e48c800" method="POST">
+      <input type="hidden" name="_subject" value="New Customer Inquiry">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="Email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="Message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  </footer>
+</body>
+</html>
