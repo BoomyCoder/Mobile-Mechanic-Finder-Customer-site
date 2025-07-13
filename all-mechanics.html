@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Mechanics - Mobile Mechanic Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="all-mechanics.html">All Mechanics</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>All Mechanics</h1>
+    <p>Browse all available mobile mechanics and see their reviews.</p>
+  </header>
+
+  <section id="all-mechanics">
+    <div class="mechanic-list">
+      <div class="mechanic-card">
+        <h3>Tyler's Auto Repair LLC (Non Mobile)</h3>
+        <p>⭐ 5.0(100 reviews)</p>
+        <p>Specialties: Electrical, Brakes, Diagnostics, Tune-Ups</p>
+        <button onclick="rateMechanic('Tyler')">Rate This Mechanic</button>
+      </div>
+      <div class="mechanic-card">
+        <h3>Abigal Riley </h3>
+        <p>⭐ 5.0 (15 reviews)</p>
+        <p>Specialties: Tune-Ups, Starters, Batteries, Suspension </p>
+        <button onclick="rateMechanic('Mary Smith')">Rate This Mechanic</button>
+      </div>
+      <div class="mechanic-card">
+        <h3>David Kaleal</h3>
+        <p>⭐ 0 (0 reviews)</p>
+        <p>Specialties: Brakes, Headlight Bulbs, Starters</p>
+        <button onclick="rateMechanic('David Kaleal')">Rate This Mechanic</button>
+      </div>
+      <div class="mechanic-card">
+        <h3>Alex Johnson</h3>
+        <p>⭐ 4.7 (35 reviews)</p>
+        <p>Specialties: Pre-Purchase Inspections, Alternators</p>
+        <button onclick="rateMechanic('Alex Johnson')">Rate This Mechanic</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function rateMechanic(name) {
+      window.location.href = 'rate.html?mechanic=' + encodeURIComponent(name);
+    }
+  </script>
+</body>
+</html>

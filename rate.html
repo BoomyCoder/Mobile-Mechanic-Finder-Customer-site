@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rate a Mechanic - Mobile Mechanic Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="all-mechanics.html">All Mechanics</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Rate a Mechanic</h1>
+    <p>Your feedback helps us improve and helps others choose the best service.</p>
+  </header>
+
+  <section>
+    <form action="https://formsubmit.co/5c8e35682fbd55bbe24c102c4e48c800" method="POST">
+      <input type="hidden" name="_subject" value="New Mechanic Rating">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="mechanicName">Mechanic Name:</label>
+      <input type="text" id="mechanicName" name="Mechanic Name" readonly />
+
+      <label for="rating">Your Rating:</label>
+      <select id="rating" name="Rating" required>
+        <option value="">Select...</option>
+        <option value="⭐ 1 - Very Dissatisfied">⭐ 1 - Very Dissatisfied</option>
+        <option value="⭐ 2 - Dissatisfied">⭐ 2 - Dissatisfied</option>
+        <option value="⭐ 3 - Neutral">⭐ 3 - Neutral</option>
+        <option value="⭐ 4 - Satisfied">⭐ 4 - Satisfied</option>
+        <option value="⭐ 5 - Very Satisfied">⭐ 5 - Very Satisfied</option>
+      </select>
+
+      <label for="review">Your Review:</label>
+      <textarea id="review" name="Review" rows="4" placeholder="Share your experience..." required></textarea>
+
+      <label for="customerName">Your Name:</label>
+      <input type="text" id="customerName" name="Customer Name" required />
+
+      <button type="submit">Submit Rating</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const mechanic = urlParams.get('mechanic');
+    if (mechanic) {
+      document.getElementById('mechanicName').value = mechanic;
+    }
+  </script>
+</body>
+</html>
