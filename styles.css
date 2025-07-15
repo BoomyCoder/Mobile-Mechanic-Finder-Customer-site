@@ -95,3 +95,19 @@ footer {
   color: white;
   margin-top: 2em;
 }
+
+.request-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #4f9cf9;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.request-button:hover {
+  background-color: #3b80d1;
+}
