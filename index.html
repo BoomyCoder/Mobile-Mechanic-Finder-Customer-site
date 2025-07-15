@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mobile Mechanic Finder</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+
+  <meta property="og:image" content="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/mobile-mechanic-finder-logo.png">
+  <meta property="og:title" content="Mobile Mechanic Finder">
+  <meta property="og:description" content="Find, Book, Fix. Find the top rated mobile mechanics">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
 </head>
 <body>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="all-mechanics.html">All Mechanics</a></li>
-      <li><a href="https://boomycoder.github.io/Mobile-Mechanic-Finder-onboarding/" target="_blank">Join Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
     </ul>
   </nav>
 
   <header>
+    <img src="mobile-mechanic-finder-logo.png" alt="Mobile Mechanic Finder logo" style="max-width:250px;">
     <h1>Mobile Mechanic Finder</h1>
     <p>Find trusted mobile mechanics and book repairs in minutes.</p>
     <p style="font-weight: bold; color: #fff; margin-top: 0.5em;">
@@ -62,7 +72,8 @@
 
   <section id="request">
     <h2>Request a Mechanic</h2>
-    <form action="https://formsubmit.co/5c8e35682fbd55bbe24c102c4e48c800" method="POST">
+    <form action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
+      <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
       <input type="hidden" name="_subject" value="New Customer Request">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
@@ -116,4 +127,3 @@
   </script>
 </body>
 </html>
-
