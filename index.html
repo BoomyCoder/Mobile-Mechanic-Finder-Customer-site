@@ -3,201 +3,463 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mobile Mechanic Finder</title>
+  <title>Mobile Mechanic Finder — Vetted Mobile Mechanics, At Your Driveway</title>
+  <meta name="description" content="Find, book, and fix. Mobile Mechanic Finder connects Cleveland and Lake County drivers with vetted, top-rated mobile mechanics — no shop, no tow, no stress.">
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 
   <meta property="og:title" content="Mobile Mechanic Finder – Book Trusted Mobile Mechanics Near You">
-  <meta property="og:description" content="Find, Book, Fix,  Mobile Mechanic Finder helps you find and book reliable mobile mechanics quickly. Fast, convenient, and affordable repairs at your doorstep.">
+  <meta property="og:description" content="Find. Book. Fix. Mobile Mechanic Finder helps you find and book reliable mobile mechanics quickly. Fast, convenient, and affordable repairs at your doorstep.">
   <meta property="og:image" content="https://www.mobilemechanicfinder.net/mobile-mechanic-finder-logo.png">
   <meta property="og:url" content="https://www.mobilemechanicfinder.net/">
   <meta property="og:type" content="website">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-
-
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="all-mechanics.html">All Mechanics</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
-    </ul>
+
+  <!-- ========== NAV ========== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-mark">M</div>
+        <div class="nav-brand-text">
+          Mobile Mechanic Finder
+          <small>Find · Book · Fix</small>
+        </div>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-mechanics.html">Mechanics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="onboarding.html" class="nav-cta">Join as Mechanic</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header>
-    <img src="mobile-mechanic-finder-logo.png" alt="Mobile Mechanic Finder logo" style="max-width:250px;">
-    <h1>Mobile Mechanic Finder</h1>
-    <p>Find trusted mobile mechanics and book repairs in minutes.</p>
-    <p style="font-weight: bold; color: #fff; margin-top: 0.5em;">
-      Now serving Cleveland and Lake County, Ohio.
-    </p>
-  </header>
-
-
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Browse top-rated mobile mechanics in your area.</li>
-      <li>Request a mechanic by name or submit a general repair request.</li>
-      <li>Your mechanic will contact you to confirm details and schedule the job.</li>
-    </ol>
-  </section>
-
-  <section id="leaderboard">
-    <h2>Top Mechanics</h2>
-    <div class="mechanic-list" id="mechanicList">
-      <div class="mechanic-card">
-        <h3>Tyler's Auto Repair LLC (Non Mobile)</h3>
-        <p>⭐ 5.0(100 reviews)</p>
-        <p>Specialties: Electrical, Brakes, Diagnostics, Tune-Ups, Suspension</p>
-        <p>Service Location: South Euclid</p>
-        <button onclick="prefillMechanic('Tyler Dennis')">Request Tyler</button>
-        <button onclick="rateMechanic('Tyler Dennis')">Rate This Mechanic</button>
-      </div>
-      <div class="mechanic-card">
-        <h3>Broken Auto Drive Repair</h3>
-        <p>⭐ 5.0 (50 reviews)</p>
-        <p>Specialties: Pads, rotors,
-          Starters,
-          Alternator,
-          Belts,
-          Tune-up,
-          Oil change,
-          Roadside,
-          Bearings,
-          And suspension</p>
-          <p>
-            Service Area: Cleveland East/West,
-            North Royalton,
-            Lorain,
-            Strongsville
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="location-badge reveal reveal-1">
+            <span class="dot"></span>
+            Now serving Cleveland &amp; Lake County, OH
+          </div>
+          <h1 class="reveal reveal-2">
+            Expert mechanics,
+            <span class="italic-accent">delivered to your driveway.</span>
+          </h1>
+          <p class="lead reveal reveal-3">
+            Skip the shop. Skip the tow. Mobile Mechanic Finder connects you with vetted, top-rated independent mechanics who come to you — home, work, or roadside.
           </p>
-        <button onclick="prefillMechanic('Broken Auto Drive Repair')">Request Brian</button>
-        <button onclick="rateMechanic('Broken Auto Drive Repair')">Rate This Mechanic</button>
-      </div>
-      <div class="mechanic-card">
-        <h3>Rileys Autocare</h3>
-        <p>⭐ 5.0 (15 reviews)</p>
-        <p>Specialties: Tune-Ups, Starters, Batteries, Suspension </p>
-        <p>
-          Service Area: Euclid, Willoughby, Mentor, Willowick, Eastlake
-        </p>
-        <button onclick="prefillMechanic('Rileys autocare')">Request Abigal</button>
-        <button onclick="rateMechanic('Rileys autocare')">Rate This Mechanic</button>
-      </div>
+          <div class="hero-actions reveal reveal-4">
+            <a href="#request" class="btn btn-primary">
+              Request a mechanic <span class="arrow">→</span>
+            </a>
+            <a href="all-mechanics.html" class="btn btn-ghost">
+              Browse all mechanics
+            </a>
+          </div>
 
+          <div class="hero-meta reveal reveal-5">
+            <div class="hero-meta-item">
+              <span class="num"><em>4</em>+</span>
+              <span class="lbl">Featured Mechanics</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="num">165+</span>
+              <span class="lbl">5-Star Reviews</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="num"><em>24</em>hr</span>
+              <span class="lbl">Response Window</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero visual card -->
+        <div class="hero-visual reveal reveal-3">
+          <div class="hv-tag">
+            <span>· LIVE</span>
+            <span>NO. 001</span>
+          </div>
+          <div class="hv-body">
+            <h2 class="hv-title">The car doctor, <em>house-call style.</em></h2>
+            <ul class="hv-list">
+              <li>Brakes, batteries &amp; alternators</li>
+              <li>Diagnostics &amp; tune-ups</li>
+              <li>Starters, belts &amp; suspension</li>
+              <li>Roadside &amp; oil services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="request">
-    <h2>Request a Mechanic</h2>
-    <form action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
-      <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
-      <input type="hidden" name="_subject" value="New Customer Request">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+  <!-- ========== HOW IT WORKS ========== -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How It Works</div>
+        <h2>Three steps. <em>That's it.</em></h2>
+      </div>
 
-      <label for="customerName">Your Name:</label>
-      <input type="text" id="customerName" name="Customer Name" required />
-
-      <label for="customerEmail">Email:</label>
-      <input type="email" id="customerEmail" name="Customer Email" required />
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="Phone Number" required />
-
-      <label for="address">Service Address:</label>
-      <input type="text" id="address" name="Service Address" placeholder="Street, City, ZIP Code" required />
-
-      <label for="vehicle">Vehicle Info:</label>
-      <input type="text" id="vehicle" name="Vehicle Info" placeholder="Year, Make, Model" required />
-
-      <label for="plateVin">Plate Number or VIN Number:</label>
-      <input type="text" id="plateVin" name="Plate or VIN Number" placeholder="Example: ABC1234 or 1HGCM82633A004352" required />
-      <p style="font-size: 0.9em; color: #555; margin-top: -0.5em;">
-        If you have temporary tags, please enter your VIN number instead of the plate number.
-      </p>
-
-      <label for="issue">Describe the Issue:</label>
-      <textarea id="issue" name="Issue Description" rows="4" required></textarea>
-
-      <label for="preferredMechanic">Preferred Mechanic (Optional):</label>
-      <input type="text" id="preferredMechanic" name="Preferred Mechanic" />
-
-     <div style="margin-top: 20px;">
-  <button 
-    type="button"
-    onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block') ? 'none' : 'block';"
-    style="background:none; border:none; color:#555; text-decoration:underline; font-size:0.9em; cursor:pointer;"
-  >
-    Disclaimer & Terms of Use
-  </button>
-  <div style="display:none; margin-top:10px; font-size:0.85em; color:#444; max-height:200px; overflow-y:auto; border:1px solid #ddd; padding:10px; background:#f9f9f9;">
-    <p><strong>Disclaimer and Limitation of Liability</strong></p>
-    <p>Mobile Mechanic Finder (“the Company,” “we,” “us,” or “our”) is an independent platform designed solely to connect individuals and businesses (“Customers”) seeking vehicle repair and maintenance services with independent mechanics and automotive service providers (“Mechanics,” “Contractors,” or “Providers”).</p>
-    <p><strong>No Warranty or Endorsement of Services</strong></p>
-    <p>We do not employ, manage, supervise, or control the Mechanics listed on or accessible through our website, nor do we guarantee or warrant the quality, safety, legality, timeliness, or any other aspect of the services provided by such Mechanics. Each Mechanic operates as an independent contractor or separate business entity that is not affiliated with Mobile Mechanic Finder beyond their listing on our platform.</p>
-    <p>Any agreement for services entered into between you and any Mechanic is strictly between you and the Mechanic. Mobile Mechanic Finder does not provide automotive repair or diagnostic services of any kind, nor do we accept responsibility for any acts, errors, omissions, representations, warranties, breaches, or negligence on the part of any Mechanic or Contractor. We do not endorse, guarantee, or warrant the workmanship, parts, or services of any Mechanic, and we expressly disclaim any liability for any loss, damage, injury, or other claim that may arise out of or in connection with your engagement of any such Mechanic.</p>
-    <p><strong>Release of Liability</strong></p>
-    <p>By using our website, application, communication channels, or any other aspect of our service to request, schedule, or connect with a Mechanic, you acknowledge and agree that Mobile Mechanic Finder shall not be held responsible or liable for any damages, costs, claims, or disputes arising from or related to:
-      <ul style="margin:0 0 0 15px; padding:0;">
-        <li>The performance or non-performance of any repair or maintenance services;</li>
-        <li>The accuracy or completeness of any information provided by Mechanics;</li>
-        <li>Any personal injury, property damage, or other loss resulting directly or indirectly from your interactions with Mechanics;</li>
-        <li>Any warranty claims, guarantees, or representations made by Mechanics or Contractors regarding their services.</li>
-      </ul>
-    </p>
-    <p>Any concerns or disputes regarding the services provided must be addressed directly with the Mechanic or Contractor, and you are solely responsible for resolving any such disputes. We encourage all Customers to exercise due diligence and conduct their own research before engaging any Mechanic, including verifying credentials, insurance, and references as appropriate for their own protection.</p>
-    <p><strong>Acceptance of Terms</strong></p>
-    <p>By accessing or using Mobile Mechanic Finder’s website or services, you expressly acknowledge and agree that:
-      <ul style="margin:0 0 0 15px; padding:0;">
-        <li>You understand that Mechanics are independent professionals and not employees, agents, or representatives of Mobile Mechanic Finder.</li>
-        <li>You assume all risks associated with using the platform and engaging Mechanics listed therein.</li>
-        <li>You release Mobile Mechanic Finder from any and all liability, claims, or damages of any kind arising out of or relating to your use of the platform or any services performed by Mechanics you connect with through the platform.</li>
-      </ul>
-    </p>
-    <p>We reserve the right to update or modify this Disclaimer at any time without prior notice. Your continued use of the platform constitutes your acceptance of any revised terms.</p>
-  </div>
-</div>
-
-
-
-      <button type="submit">Submit Request</button>
-    </form>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Browse local mechanics</h3>
+          <p>Compare top-rated mobile mechanics serving your area. Real reviews, real specialties, real availability.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Request your repair</h3>
+          <p>Pick a mechanic by name or submit a general request. Tell us what's wrong and where you're parked.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Get fixed up</h3>
+          <p>Your mechanic contacts you to confirm the price and time. They show up. Your car drives away.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  <!-- ========== FEATURED MECHANICS ========== -->
+  <section id="leaderboard">
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <div class="eyebrow">Featured Mechanics</div>
+          <h2>Top-rated, <em>vetted</em>, and ready.</h2>
+        </div>
+        <a href="all-mechanics.html" class="btn btn-ghost btn-sm">View all <span class="arrow">→</span></a>
+      </div>
+
+      <div class="mechanics-grid">
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">Tyler's Auto Repair LLC</h3>
+            <span class="mechanic-card-tag featured">Featured</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">5.0</span>
+            <span>· 100 reviews</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Electrical, Brakes, Diagnostics, Tune-Ups, Suspension</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">South Euclid (non-mobile)</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <button class="btn btn-primary btn-sm" onclick="prefillMechanic('Tyler Dennis')">Request Tyler</button>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('Tyler Dennis')">Rate</button>
+          </div>
+        </div>
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">Broken Auto Drive Repair</h3>
+            <span class="mechanic-card-tag featured">Featured</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">5.0</span>
+            <span>· 50 reviews</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Pads &amp; rotors, starters, alternators, belts, tune-ups, oil change, roadside, bearings, suspension</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">Cleveland East/West, North Royalton, Lorain, Strongsville</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <button class="btn btn-primary btn-sm" onclick="prefillMechanic('Broken Auto Drive Repair')">Request Brian</button>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('Broken Auto Drive Repair')">Rate</button>
+          </div>
+        </div>
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">Rileys Autocare</h3>
+            <span class="mechanic-card-tag featured">Featured</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">5.0</span>
+            <span>· 15 reviews</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Tune-Ups, Starters, Batteries, Suspension</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">Euclid, Willoughby, Mentor, Willowick, Eastlake</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <button class="btn btn-primary btn-sm" onclick="prefillMechanic('Rileys Autocare')">Request Abigal</button>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('Rileys Autocare')">Rate</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE AREA + WHY ========== -->
+  <section id="service">
+    <div class="container">
+      <div class="service-block">
+        <div>
+          <div class="eyebrow">Service Area</div>
+          <h2>Serving Cleveland &amp; <em>Lake County.</em></h2>
+          <p class="lead" style="margin-top: 1rem;">
+            We work with independent mobile mechanics across Northeast Ohio. Don't see your city? Submit a request — chances are someone covers it.
+          </p>
+        </div>
+        <ul class="area-list">
+          <li>Cleveland</li>
+          <li>Euclid</li>
+          <li>South Euclid</li>
+          <li>Mentor</li>
+          <li>Willoughby</li>
+          <li>Willowick</li>
+          <li>Eastlake</li>
+          <li>North Royalton</li>
+          <li>Strongsville</li>
+          <li>Lorain</li>
+        </ul>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">✓</span>
+          <h4>Vetted &amp; reviewed</h4>
+          <p>Every featured mechanic carries verified reviews from real local customers.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">$</span>
+          <h4>No middleman markup</h4>
+          <p>You pay the mechanic directly. We don't take a cut of the repair.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">⟶</span>
+          <h4>They come to you</h4>
+          <p>Home, work, parking lot, roadside. The shop comes to your driveway.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">★</span>
+          <h4>Bring your own parts</h4>
+          <p>Want to source your own parts? Most of our mechanics are happy to install them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REQUEST FORM ========== -->
+  <section id="request">
+    <div class="container-narrow">
+      <div class="section-head text-center" style="margin: 0 auto 3rem;">
+        <div class="eyebrow" style="justify-content: center;">Request a Mechanic</div>
+        <h2>Tell us what's <em>broken.</em></h2>
+        <p class="lead" style="margin: 1rem auto 0;">Fill in the details below. The right mechanic will be in touch within 24 hours to confirm.</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-meta">
+          <span>Form / 01</span>
+          <span>Customer Request</span>
+        </div>
+
+        <form class="styled" action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
+          <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
+          <input type="hidden" name="_subject" value="New Customer Request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="form-row">
+            <div>
+              <label for="customerName">Your name</label>
+              <input type="text" id="customerName" name="Customer Name" placeholder="Jane Smith" required />
+            </div>
+            <div>
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="Phone Number" placeholder="(216) 555-0100" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="customerEmail">Email address</label>
+            <input type="email" id="customerEmail" name="Customer Email" placeholder="you@email.com" required />
+          </div>
+
+          <div>
+            <label for="address">Service address</label>
+            <input type="text" id="address" name="Service Address" placeholder="Street, City, ZIP Code" required />
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="vehicle">Vehicle info</label>
+              <input type="text" id="vehicle" name="Vehicle Info" placeholder="Year, Make, Model" required />
+            </div>
+            <div>
+              <label for="plateVin">Plate or VIN number</label>
+              <input type="text" id="plateVin" name="Plate or VIN Number" placeholder="ABC1234 or full VIN" required />
+            </div>
+          </div>
+          <p class="form-hint">Got temporary tags? Enter your VIN instead of a plate number.</p>
+
+          <div>
+            <label for="issue">Describe the issue</label>
+            <textarea id="issue" name="Issue Description" rows="4" placeholder="Tell us what's going on — sounds, lights, when it started…" required></textarea>
+          </div>
+
+          <div>
+            <label for="preferredMechanic">Preferred mechanic <span style="color: var(--text-dim); text-transform: none; letter-spacing: 0;">(optional)</span></label>
+            <input type="text" id="preferredMechanic" name="Preferred Mechanic" placeholder="Leave blank for any available" />
+          </div>
+
+          <div style="margin-top: 0.6rem;">
+            <button type="button" class="disclaimer-toggle" onclick="toggleDisclaimer(this)">
+              Disclaimer &amp; Terms of Use
+            </button>
+            <div class="disclaimer-body">
+              <p><strong>Disclaimer and Limitation of Liability</strong></p>
+              <p>Mobile Mechanic Finder ("the Company," "we," "us," or "our") is an independent platform designed solely to connect individuals and businesses ("Customers") seeking vehicle repair and maintenance services with independent mechanics and automotive service providers ("Mechanics," "Contractors," or "Providers").</p>
+              <p><strong>No Warranty or Endorsement of Services</strong></p>
+              <p>We do not employ, manage, supervise, or control the Mechanics listed on or accessible through our website, nor do we guarantee or warrant the quality, safety, legality, timeliness, or any other aspect of the services provided by such Mechanics. Each Mechanic operates as an independent contractor or separate business entity that is not affiliated with Mobile Mechanic Finder beyond their listing on our platform.</p>
+              <p>Any agreement for services entered into between you and any Mechanic is strictly between you and the Mechanic. Mobile Mechanic Finder does not provide automotive repair or diagnostic services of any kind, nor do we accept responsibility for any acts, errors, omissions, representations, warranties, breaches, or negligence on the part of any Mechanic or Contractor.</p>
+              <p><strong>Release of Liability</strong></p>
+              <p>By using our website, application, communication channels, or any other aspect of our service to request, schedule, or connect with a Mechanic, you acknowledge and agree that Mobile Mechanic Finder shall not be held responsible or liable for any damages, costs, claims, or disputes arising from or related to:</p>
+              <ul>
+                <li>The performance or non-performance of any repair or maintenance services;</li>
+                <li>The accuracy or completeness of any information provided by Mechanics;</li>
+                <li>Any personal injury, property damage, or other loss resulting directly or indirectly from your interactions with Mechanics;</li>
+                <li>Any warranty claims, guarantees, or representations made by Mechanics or Contractors regarding their services.</li>
+              </ul>
+              <p>Any concerns or disputes regarding the services provided must be addressed directly with the Mechanic or Contractor, and you are solely responsible for resolving any such disputes. We encourage all Customers to exercise due diligence and conduct their own research before engaging any Mechanic.</p>
+              <p><strong>Acceptance of Terms</strong></p>
+              <p>By accessing or using Mobile Mechanic Finder's website or services, you expressly acknowledge and agree that:</p>
+              <ul>
+                <li>You understand that Mechanics are independent professionals and not employees, agents, or representatives of Mobile Mechanic Finder.</li>
+                <li>You assume all risks associated with using the platform and engaging Mechanics listed therein.</li>
+                <li>You release Mobile Mechanic Finder from any and all liability, claims, or damages of any kind arising out of or relating to your use of the platform or any services performed by Mechanics you connect with through the platform.</li>
+              </ul>
+              <p>We reserve the right to update or modify this Disclaimer at any time without prior notice. Your continued use of the platform constitutes your acceptance of any revised terms.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block form-submit">
+            Submit request <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MECHANIC CTA ========== -->
+  <section id="join-cta">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="eyebrow" style="justify-content: center;">For Mechanics</div>
+        <h2>Keep 80% of every job. <em>No monthly fee.</em></h2>
+        <p class="lead">Featured listing + customer requests by name + we handle the payment. You wrench, we pay you out next business day via Cash App.</p>
+        <div class="price">
+          80%
+          <small>your cut · no monthly fees</small>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="onboarding.html" class="btn btn-primary">Join Our Team <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-brand-mark">M</div>
+            <div class="nav-brand-text">
+              Mobile Mechanic Finder
+              <small>Find · Book · Fix</small>
+            </div>
+          </a>
+          <p>Connecting Cleveland and Lake County drivers with vetted mobile mechanics since 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>For Customers</h4>
+          <ul>
+            <li><a href="index.html#request">Request a mechanic</a></li>
+            <li><a href="all-mechanics.html">Browse mechanics</a></li>
+            <li><a href="rate.html">Rate a mechanic</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Mechanics</h4>
+          <ul>
+            <li><a href="onboarding.html">Join our team</a></li>
+            <li><a href="onboarding.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:2166002694">(216) 600-2694</a></li>
+            <li><a href="mailto:mobilemechanicfinder@gmail.com">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mobile Mechanic Finder</span>
+        <span>Cleveland · Lake County · Ohio</span>
+      </div>
+    </div>
   </footer>
 
   <script>
     function prefillMechanic(name) {
       document.getElementById('preferredMechanic').value = name;
-      window.scrollTo({
-        top: document.getElementById('request').offsetTop,
-        behavior: 'smooth'
-      });
+      document.getElementById('request').scrollIntoView({ behavior: 'smooth' });
     }
     function rateMechanic(name) {
       window.location.href = 'rate.html?mechanic=' + encodeURIComponent(name);
     }
-  </script>
-  <script>
+    function toggleDisclaimer(btn) {
+      btn.classList.toggle('open');
+      btn.nextElementSibling.classList.toggle('open');
+    }
+
     // Prefill Preferred Mechanic if URL has ?mechanic=
     const urlParams = new URLSearchParams(window.location.search);
     const mechanic = urlParams.get('mechanic');
     if (mechanic) {
       document.getElementById('preferredMechanic').value = mechanic;
-      // Optional: Scroll down automatically
-      window.scrollTo({
-        top: document.getElementById('request').offsetTop,
-        behavior: 'smooth'
-      });
+      setTimeout(() => {
+        document.getElementById('request').scrollIntoView({ behavior: 'smooth' });
+      }, 200);
     }
   </script>
-
 </body>
 </html>

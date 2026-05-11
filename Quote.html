@@ -3,146 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mobile Mechanic Finder - Quote Request</title>
-  <link rel="stylesheet" href="stylesheet.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <meta property="og:title" content="Mobile Mechanic Finder – Request an estimate">
-  <meta property="og:description" content="Find, Book, Fix,  Mobile Mechanic Finder helps you find and book reliable mobile mechanics quickly. Fast, convenient, and affordable repairs at your doorstep.">
+  <title>Quote Request — Mobile Mechanic Finder</title>
+  <meta name="description" content="Request a free quote from a Mobile Mechanic Finder mechanic. Servicing Cleveland and Lake County, Ohio.">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+
+  <meta property="og:title" content="Mobile Mechanic Finder – Request an Estimate">
+  <meta property="og:description" content="Find. Book. Fix. Mobile Mechanic Finder helps you find and book reliable mobile mechanics quickly.">
   <meta property="og:image" content="https://www.mobilemechanicfinder.net/mobile-mechanic-finder-logo.png">
   <meta property="og:url" content="https://www.mobilemechanicfinder.net/">
   <meta property="og:type" content="website">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">Mobile Mechanic Finder</div>
-      <nav>
-        <a href="https://www.mobilemechanicfinder.net/index.html" target="_blank" class="nav-link">Our Website</a>
-      </nav>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-mark">M</div>
+        <div class="nav-brand-text">
+          Mobile Mechanic Finder
+          <small>Find · Book · Fix</small>
+        </div>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="https://www.mobilemechanicfinder.net/index.html" target="_blank">Our Website</a></li>
+        <li><a href="https://popl.co/card/6vxGB1q1/4/s" target="_blank" class="nav-cta">Digital Card</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <section class="callout-section">
-      <h2>Stay Connected With Us!</h2>
-      <p>
-        Check out our 
-        <a href="https://popl.co/card/6vxGB1q1/4/s" target="_blank">digital business card</a>
-        to get in touch easily.
+  <section class="hero" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="location-badge reveal reveal-1">
+        <span class="dot"></span>
+        Servicing Cleveland &amp; Lake County, OH
+      </div>
+      <h1 class="reveal reveal-2" style="max-width: 18ch;">
+        Get a quote. <span class="italic-accent">No shop visit.</span>
+      </h1>
+      <p class="lead reveal reveal-3" style="margin-top: 1.5rem;">
+        Mobile Mechanic Finder connects you with local, independent mobile mechanics who come to you — at home, work, or roadside. No shop visits, no towing, no stress. Book a trusted mechanic, get a quote, and bring your own parts if you prefer.
       </p>
-      <p>
-        Don’t forget to scroll down and watch our featured repair video, and follow us on Facebook to stay up to date!
-      </p>
-    </section>
+    </div>
+  </section>
 
-    <section class="welcome-section">
-      <h1>Welcome to Mobile Mechanic Finder</h1>
-      <p>
-        Mobile Mechanic Finder
-        We connect you with local, independent mobile mechanics who come to you—at home, work, or roadside. No shop visits, no towing, no stress.
-        Book a trusted mechanic, get a quote, and enjoy the freedom to use your own parts if you prefer.
-        Fast. Easy. Affordable.
-        Find. Book. Fix.
-      </p>
-    </section>
+  <section style="padding-top: 0;">
+    <div class="container-narrow">
 
-    <div class="form-wrapper">
-      <h2 class="title">Quote Request Form</h2>
-      <h3 class="shop-name">Servicing Cleveland and Lake County, Ohio</h3>
-      <div class="card">
-        <form class="form" action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
-          <h2 class="form-heading">Enter Info Below</h2>
-          <label>First Name</label>
-          <input type="text" name="first-name" placeholder="First Name" required/>
-          <label>Last Name</label>
-          <input type="text" name="last-name" placeholder="Last Name" required/>
-          <label>Phone Number</label>
-          <input type="text" name="phone-number" placeholder="Phone Number" required/>
-          <label>Home Address</label>
-          <input type="text" name="home-address" placeholder="Home Address" required/>
-          <label>City</label>
-          <input type="text" name="city" placeholder="City" required/>
-          <label>State</label>
-          <input type="text" name="state" placeholder="State" required/>
-          <label>Zip</label>
-          <input type="text" name="zip" placeholder="Zip" required/>
-          <label>Email</label>
-          <input type="email" name="email" placeholder="Email" required/>
-          <label>Year/Make/Model</label>
-          <input type="text" name="year/make/model" placeholder="Year/Make/Model" required/>
-          <label>Plate Number</label>
-          <input type="text" name="plate-number" placeholder="Plate Number" required/>
-          <textarea name="textarea" placeholder="Please tell us about what you are inquiring about."></textarea>
-          <p class="note">If you have temp tags, please enter the VIN number instead of plate number.</p>
-          <p class="note">When the form is submitted, you will be redirected to our website. No further action is needed.</p>
+      <div class="callout-card">
+        <div class="eyebrow">Stay Connected</div>
+        <h2 class="mt-0">Find us elsewhere.</h2>
+        <p>Check out our <a href="https://popl.co/card/6vxGB1q1/4/s" target="_blank">digital business card</a> to get in touch easily.</p>
+        <p>Scroll down to watch our featured repair video, and follow us on social to stay up to date.</p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-meta">
+          <span>Form / Quote</span>
+          <span>Estimate Request</span>
+        </div>
+
+        <form class="styled" action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
           <input type="hidden" name="_subject" value="NEW WORK REQUEST"/>
           <input type="hidden" name="_next" value="https://www.mobilemechanicfinder.net/thankyou.html"/>
           <input type="hidden" name="_captcha" value="false"/>
+          <input type="hidden" name="_template" value="table"/>
 
-          <div style="margin-top: 20px;">
-  <button 
-    type="button"
-    onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block') ? 'none' : 'block';"
-    style="background:none; border:none; color:#555; text-decoration:underline; font-size:0.9em; cursor:pointer;"
-  >
-    Disclaimer & Terms of Use
-  </button>
-  <div style="display:none; margin-top:10px; font-size:0.85em; color:#444; max-height:200px; overflow-y:auto; border:1px solid #ddd; padding:10px; background:#f9f9f9;">
-    <p><strong>Disclaimer and Limitation of Liability</strong></p>
-    <p>Mobile Mechanic Finder (“the Company,” “we,” “us,” or “our”) is an independent platform designed solely to connect individuals and businesses (“Customers”) seeking vehicle repair and maintenance services with independent mechanics and automotive service providers (“Mechanics,” “Contractors,” or “Providers”).</p>
-    <p><strong>No Warranty or Endorsement of Services</strong></p>
-    <p>We do not employ, manage, supervise, or control the Mechanics listed on or accessible through our website, nor do we guarantee or warrant the quality, safety, legality, timeliness, or any other aspect of the services provided by such Mechanics. Each Mechanic operates as an independent contractor or separate business entity that is not affiliated with Mobile Mechanic Finder beyond their listing on our platform.</p>
-    <p>Any agreement for services entered into between you and any Mechanic is strictly between you and the Mechanic. Mobile Mechanic Finder does not provide automotive repair or diagnostic services of any kind, nor do we accept responsibility for any acts, errors, omissions, representations, warranties, breaches, or negligence on the part of any Mechanic or Contractor. We do not endorse, guarantee, or warrant the workmanship, parts, or services of any Mechanic, and we expressly disclaim any liability for any loss, damage, injury, or other claim that may arise out of or in connection with your engagement of any such Mechanic.</p>
-    <p><strong>Release of Liability</strong></p>
-    <p>By using our website, application, communication channels, or any other aspect of our service to request, schedule, or connect with a Mechanic, you acknowledge and agree that Mobile Mechanic Finder shall not be held responsible or liable for any damages, costs, claims, or disputes arising from or related to:
-      <ul style="margin:0 0 0 15px; padding:0;">
-        <li>The performance or non-performance of any repair or maintenance services;</li>
-        <li>The accuracy or completeness of any information provided by Mechanics;</li>
-        <li>Any personal injury, property damage, or other loss resulting directly or indirectly from your interactions with Mechanics;</li>
-        <li>Any warranty claims, guarantees, or representations made by Mechanics or Contractors regarding their services.</li>
-      </ul>
-    </p>
-    <p>Any concerns or disputes regarding the services provided must be addressed directly with the Mechanic or Contractor, and you are solely responsible for resolving any such disputes. We encourage all Customers to exercise due diligence and conduct their own research before engaging any Mechanic, including verifying credentials, insurance, and references as appropriate for their own protection.</p>
-    <p><strong>Acceptance of Terms</strong></p>
-    <p>By accessing or using Mobile Mechanic Finder’s website or services, you expressly acknowledge and agree that:
-      <ul style="margin:0 0 0 15px; padding:0;">
-        <li>You understand that Mechanics are independent professionals and not employees, agents, or representatives of Mobile Mechanic Finder.</li>
-        <li>You assume all risks associated with using the platform and engaging Mechanics listed therein.</li>
-        <li>You release Mobile Mechanic Finder from any and all liability, claims, or damages of any kind arising out of or relating to your use of the platform or any services performed by Mechanics you connect with through the platform.</li>
-      </ul>
-    </p>
-    <p>We reserve the right to update or modify this Disclaimer at any time without prior notice. Your continued use of the platform constitutes your acceptance of any revised terms.</p>
-  </div>
-</div>
+          <div class="form-row">
+            <div>
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="first-name" placeholder="Jane" required/>
+            </div>
+            <div>
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="last-name" placeholder="Smith" required/>
+            </div>
+          </div>
 
+          <div class="form-row">
+            <div>
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone-number" placeholder="(216) 555-0100" required/>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required/>
+            </div>
+          </div>
 
-          <button type="submit" class="submit-button">Submit Request</button>
+          <div>
+            <label for="address">Home address</label>
+            <input type="text" id="address" name="home-address" placeholder="Street address" required/>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" placeholder="Cleveland" required/>
+            </div>
+            <div>
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" placeholder="OH" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="zip">Zip code</label>
+              <input type="text" id="zip" name="zip" placeholder="44101" required/>
+            </div>
+            <div>
+              <label for="plate">Plate number</label>
+              <input type="text" id="plate" name="plate-number" placeholder="ABC1234" required/>
+            </div>
+          </div>
+
+          <div>
+            <label for="vehicle">Year / Make / Model</label>
+            <input type="text" id="vehicle" name="year/make/model" placeholder="2014 Dodge Journey" required/>
+          </div>
+
+          <div>
+            <label for="notes">Tell us what's going on</label>
+            <textarea id="notes" name="textarea" rows="4" placeholder="What needs fixing? Sounds, lights, when it started — any detail helps."></textarea>
+          </div>
+
+          <p class="form-hint">Got temporary tags? Enter your VIN instead of the plate number.</p>
+          <p class="form-hint">After you submit, you'll be redirected to our website. No further action needed.</p>
+
+          <div style="margin-top: 0.6rem;">
+            <button type="button" class="disclaimer-toggle" onclick="toggleDisclaimer(this)">
+              Disclaimer &amp; Terms of Use
+            </button>
+            <div class="disclaimer-body">
+              <p><strong>Disclaimer and Limitation of Liability</strong></p>
+              <p>Mobile Mechanic Finder ("the Company," "we," "us," or "our") is an independent platform designed solely to connect individuals and businesses ("Customers") seeking vehicle repair and maintenance services with independent mechanics and automotive service providers ("Mechanics," "Contractors," or "Providers").</p>
+              <p><strong>No Warranty or Endorsement of Services</strong></p>
+              <p>We do not employ, manage, supervise, or control the Mechanics listed on or accessible through our website, nor do we guarantee or warrant the quality, safety, legality, timeliness, or any other aspect of the services provided by such Mechanics. Each Mechanic operates as an independent contractor or separate business entity that is not affiliated with Mobile Mechanic Finder beyond their listing on our platform.</p>
+              <p>Any agreement for services entered into between you and any Mechanic is strictly between you and the Mechanic. Mobile Mechanic Finder does not provide automotive repair or diagnostic services of any kind, nor do we accept responsibility for any acts, errors, omissions, representations, warranties, breaches, or negligence on the part of any Mechanic or Contractor.</p>
+              <p><strong>Release of Liability</strong></p>
+              <p>By using our website, application, communication channels, or any other aspect of our service to request, schedule, or connect with a Mechanic, you acknowledge and agree that Mobile Mechanic Finder shall not be held responsible or liable for any damages, costs, claims, or disputes arising from or related to:</p>
+              <ul>
+                <li>The performance or non-performance of any repair or maintenance services;</li>
+                <li>The accuracy or completeness of any information provided by Mechanics;</li>
+                <li>Any personal injury, property damage, or other loss resulting directly or indirectly from your interactions with Mechanics;</li>
+                <li>Any warranty claims, guarantees, or representations made by Mechanics or Contractors regarding their services.</li>
+              </ul>
+              <p>Any concerns or disputes regarding the services provided must be addressed directly with the Mechanic or Contractor, and you are solely responsible for resolving any such disputes.</p>
+              <p><strong>Acceptance of Terms</strong></p>
+              <p>By accessing or using Mobile Mechanic Finder's website or services, you expressly acknowledge and agree that:</p>
+              <ul>
+                <li>You understand that Mechanics are independent professionals and not employees, agents, or representatives of Mobile Mechanic Finder.</li>
+                <li>You assume all risks associated with using the platform and engaging Mechanics listed therein.</li>
+                <li>You release Mobile Mechanic Finder from any and all liability, claims, or damages of any kind arising out of or relating to your use of the platform or any services performed by Mechanics you connect with through the platform.</li>
+              </ul>
+              <p>We reserve the right to update or modify this Disclaimer at any time without prior notice. Your continued use of the platform constitutes your acceptance of any revised terms.</p>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block form-submit">
+            Submit quote request <span class="arrow">→</span>
+          </button>
         </form>
       </div>
 
-      <div class="tiktok-wrapper">
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tylers_auto_repair/video/7520105311198301470" data-video-id="7520105311198301470" style="max-width: 605px;min-width: 325px;">
+      <div class="tiktok-wrap">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tylers_auto_repair/video/7520105311198301470" data-video-id="7520105311198301470" style="max-width: 605px; min-width: 325px;">
           <section>
             <a target="_blank" title="@tylers_auto_repair" href="https://www.tiktok.com/@tylers_auto_repair?refer=embed">@tylers_auto_repair</a>
             Grinding noise: alternator replacement, 2014 Dodge Journey.
             <a title="clevelandmechanic" target="_blank" href="https://www.tiktok.com/tag/clevelandmechanic?refer=embed">#ClevelandMechanic</a>
             <a title="cardoctor" target="_blank" href="https://www.tiktok.com/tag/cardoctor?refer=embed">#CarDoctor</a>
-            <a title="blackowned" target="_blank" href="https://www.tiktok.com/tag/blackowned?refer=embed">#BlackOwned</a>
             <a title="autorepair" target="_blank" href="https://www.tiktok.com/tag/autorepair?refer=embed">#AutoRepair</a>
             <a title="cleveland" target="_blank" href="https://www.tiktok.com/tag/cleveland?refer=embed">#Cleveland</a>
             <a title="alternator" target="_blank" href="https://www.tiktok.com/tag/alternator?refer=embed">#Alternator</a>
-            <a title="dodge" target="_blank" href="https://www.tiktok.com/tag/dodge?refer=embed">#Dodge</a>
-            <a title="journey" target="_blank" href="https://www.tiktok.com/tag/journey?refer=embed">#Journey</a>
-            <a title="grinding" target="_blank" href="https://www.tiktok.com/tag/grinding?refer=embed">#Grinding</a>
-            <a target="_blank" title="♬ original sound - Tyler’s Auto Repair LLC" href="https://www.tiktok.com/music/original-sound-7520105337345641247?refer=embed">♬ original sound - Tyler’s Auto Repair LLC</a>
+            <a target="_blank" title="♬ original sound - Tyler's Auto Repair LLC" href="https://www.tiktok.com/music/original-sound-7520105337345641247?refer=embed">♬ original sound</a>
           </section>
         </blockquote>
         <script async src="https://www.tiktok.com/embed.js"></script>
       </div>
     </div>
-  </main>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-brand-mark">M</div>
+            <div class="nav-brand-text">
+              Mobile Mechanic Finder
+              <small>Find · Book · Fix</small>
+            </div>
+          </a>
+          <p>Connecting Cleveland and Lake County drivers with vetted mobile mechanics since 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>For Customers</h4>
+          <ul>
+            <li><a href="index.html#request">Request a mechanic</a></li>
+            <li><a href="all-mechanics.html">Browse mechanics</a></li>
+            <li><a href="rate.html">Rate a mechanic</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Mechanics</h4>
+          <ul>
+            <li><a href="onboarding.html">Join our team</a></li>
+            <li><a href="onboarding.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:2166002694">(216) 600-2694</a></li>
+            <li><a href="mailto:mobilemechanicfinder@gmail.com">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mobile Mechanic Finder</span>
+        <span>Cleveland · Lake County · Ohio</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleDisclaimer(btn) {
+      btn.classList.toggle('open');
+      btn.nextElementSibling.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>

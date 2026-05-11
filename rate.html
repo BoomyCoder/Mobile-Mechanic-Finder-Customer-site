@@ -3,56 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rate a Mechanic - Mobile Mechanic Finder</title>
+  <title>Rate a Mechanic — Mobile Mechanic Finder</title>
+  <meta name="description" content="Share your experience. Your honest review helps drivers find the right mobile mechanic — and helps great mechanics get more business.">
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="all-mechanics.html">All Mechanics</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
-    </ul>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-mark">M</div>
+        <div class="nav-brand-text">
+          Mobile Mechanic Finder
+          <small>Find · Book · Fix</small>
+        </div>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-mechanics.html">Mechanics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="onboarding.html" class="nav-cta">Join as Mechanic</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header>
-    <h1>Rate a Mechanic</h1>
-    <p>Your feedback helps us improve and helps others choose the best service.</p>
-  </header>
-
-  <section>
-    <form action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
-      <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
-      <input type="hidden" name="_subject" value="New Mechanic Rating">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <label for="mechanicName">Mechanic Name:</label>
-      <input type="text" id="mechanicName" name="Mechanic Name" readonly />
-
-      <label for="rating">Your Rating:</label>
-      <select id="rating" name="Rating" required>
-        <option value="">Select...</option>
-        <option value="⭐ 1 - Very Dissatisfied">⭐ 1 - Very Dissatisfied</option>
-        <option value="⭐ 2 - Dissatisfied">⭐ 2 - Dissatisfied</option>
-        <option value="⭐ 3 - Neutral">⭐ 3 - Neutral</option>
-        <option value="⭐ 4 - Satisfied">⭐ 4 - Satisfied</option>
-        <option value="⭐ 5 - Very Satisfied">⭐ 5 - Very Satisfied</option>
-      </select>
-
-      <label for="review">Your Review:</label>
-      <textarea id="review" name="Review" rows="4" placeholder="Share your experience..." required></textarea>
-
-      <label for="customerName">Your Name:</label>
-      <input type="text" id="customerName" name="Customer Name" required />
-
-      <button type="submit">Submit Rating</button>
-    </form>
+  <section class="hero" style="padding-bottom: 3rem;">
+    <div class="container">
+      <div class="eyebrow reveal reveal-1">Customer Review</div>
+      <h1 class="reveal reveal-2" style="max-width: 20ch;">
+        How was the <span class="italic-accent">job?</span>
+      </h1>
+      <p class="lead reveal reveal-3" style="margin-top: 1.5rem;">
+        Your honest review helps other drivers choose the right mechanic — and helps great mechanics get the business they deserve.
+      </p>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  <section style="padding-top: 0;">
+    <div class="container-narrow">
+      <div class="form-card">
+        <div class="form-meta">
+          <span>Form / 04</span>
+          <span>Mechanic Rating</span>
+        </div>
+
+        <form class="styled" action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
+          <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
+          <input type="hidden" name="_subject" value="New Mechanic Rating">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <div>
+            <label for="mechanicName">Mechanic name</label>
+            <input type="text" id="mechanicName" name="Mechanic Name" readonly />
+          </div>
+
+          <div>
+            <label for="rating">Your rating</label>
+            <select id="rating" name="Rating" required>
+              <option value="">Select a rating…</option>
+              <option value="⭐ 1 - Very Dissatisfied">★☆☆☆☆ — 1 / Very Dissatisfied</option>
+              <option value="⭐ 2 - Dissatisfied">★★☆☆☆ — 2 / Dissatisfied</option>
+              <option value="⭐ 3 - Neutral">★★★☆☆ — 3 / Neutral</option>
+              <option value="⭐ 4 - Satisfied">★★★★☆ — 4 / Satisfied</option>
+              <option value="⭐ 5 - Very Satisfied">★★★★★ — 5 / Very Satisfied</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="review">Your review</label>
+            <textarea id="review" name="Review" rows="5" placeholder="Tell other drivers what your experience was like…" required></textarea>
+          </div>
+
+          <div>
+            <label for="customerName">Your name</label>
+            <input type="text" id="customerName" name="Customer Name" placeholder="First name and last initial works fine" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block form-submit">
+            Submit rating <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-brand-mark">M</div>
+            <div class="nav-brand-text">
+              Mobile Mechanic Finder
+              <small>Find · Book · Fix</small>
+            </div>
+          </a>
+          <p>Connecting Cleveland and Lake County drivers with vetted mobile mechanics since 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>For Customers</h4>
+          <ul>
+            <li><a href="index.html#request">Request a mechanic</a></li>
+            <li><a href="all-mechanics.html">Browse mechanics</a></li>
+            <li><a href="rate.html">Rate a mechanic</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Mechanics</h4>
+          <ul>
+            <li><a href="onboarding.html">Join our team</a></li>
+            <li><a href="onboarding.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:2166002694">(216) 600-2694</a></li>
+            <li><a href="mailto:mobilemechanicfinder@gmail.com">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mobile Mechanic Finder</span>
+        <span>Cleveland · Lake County · Ohio</span>
+      </div>
+    </div>
   </footer>
 
   <script>

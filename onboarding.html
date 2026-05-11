@@ -3,75 +3,289 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join Mobile Mechanic Finder</title>
+  <title>Join Our Team — Mobile Mechanic Finder</title>
+  <meta name="description" content="Get more jobs and keep 80% of every one. No monthly fee. We handle the customer payment, you do the wrench work. Join Mobile Mechanic Finder.">
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 
   <meta property="og:image" content="https://www.mobilemechanicfinder.net/mobile-mechanic-finder-logo.png">
-  <meta property="og:title" content="Mobile Mechanic Finder">
-  <meta property="og:description" content="Find, Book, Fix. Find the top rated mobile mechanics">
+  <meta property="og:title" content="Join Mobile Mechanic Finder — Keep 80% of every job">
+  <meta property="og:description" content="No monthly fee. Get more jobs as a mobile mechanic. Featured listing + customer requests + 80/20 pay split with next-business-day Cash App payouts.">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="all-mechanics.html">All Mechanics</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
-    </ul>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-mark">M</div>
+        <div class="nav-brand-text">
+          Mobile Mechanic Finder
+          <small>Find &middot; Book &middot; Fix</small>
+        </div>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-mechanics.html">Mechanics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="onboarding.html" class="nav-cta">Join as Mechanic</a></li>
+      </ul>
+    </div>
   </nav>
 
-
-  <header>
-    <h1>Join Mobile Mechanic Finder</h1>
-    <p>Get more customers and grow your mobile repair business.</p>
-  </header>
-
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Sign up for free—no upfront fees.</li>
-      <li>Get job requests in your area.</li>
-      <li>Set your own prices or have us give you a suggested price.</li>
-      <li>Accept the jobs you want.</li>
-      <li>Complete the work and get paid via Cash App by midnight every day.</li>
-    </ol>
-    <p>You’ll also be featured on our website leaderboard with personal reviews. Customers can even request you by name!</p>
+  <section class="hero" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="location-badge reveal reveal-1">
+        <span class="dot"></span>
+        Now accepting mechanics in NE Ohio
+      </div>
+      <h1 class="reveal reveal-2" style="max-width: 18ch;">
+        More jobs. <span class="italic-accent">More money. No monthly fees.</span>
+      </h1>
+      <p class="lead reveal reveal-3" style="margin-top: 1.5rem;">
+        Mobile Mechanic Finder sends customers directly to you &mdash; by name. You set your prices. We handle the customer payment. You keep 80% of every completed job and pay nothing until you earn.
+      </p>
+    </div>
   </section>
 
+  <!-- ========== PRICING ========== -->
+  <section id="pricing" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="pricing">
+        <div class="pricing-info">
+          <div class="eyebrow">Pay Structure</div>
+          <h2>Keep 80%. <em>We take 20%.</em></h2>
+          <p class="lead" style="margin-top: 1rem;">
+            No monthly fee. No upfront cost. You only pay when you get paid &mdash; and we handle the customer payment so you don't have to chase invoices.
+          </p>
+
+          <div class="split-legend">
+            <span>You &middot; 80%</span>
+            <span>Platform &middot; 20%</span>
+          </div>
+          <div class="split-bar">
+            <div class="split-mechanic">Mechanic &middot; 80%</div>
+            <div class="split-platform">Us &middot; 20%</div>
+          </div>
+
+          <ul>
+            <li><strong>No monthly fee</strong> &mdash; only pay when you get paid</li>
+            <li><strong>20% per completed job</strong>, all-inclusive (covers payment processing, lead generation &amp; customer support)</li>
+            <li>Set your own quote, or get a suggested price from us</li>
+            <li>Cash App payout the next business day after the job is done</li>
+            <li>You keep 100% of any tips</li>
+            <li>Cancel anytime &mdash; no contract, no exit fees</li>
+          </ul>
+        </div>
+        <div class="pricing-price">
+          <div class="label">Your Cut</div>
+          <div class="amount">
+            80<span class="currency">%</span>
+            <span class="period">of every completed job</span>
+          </div>
+          <p class="note">Example: $300 brake job &rarr; you keep $240, we keep $60. That's it.</p>
+          <div style="margin-top: 1.6rem;">
+            <a href="#signup" class="btn btn-primary">Apply now <span class="arrow">&darr;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW PAYMENT WORKS ========== -->
+  <section id="payment-flow" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How Payment Works</div>
+        <h2>Quote, complete, <em>get paid.</em></h2>
+        <p class="lead" style="margin-top: 1rem;">We handle the money so you can focus on the wrench. No collecting cash. No chasing customers. No bounced checks.</p>
+      </div>
+
+      <div class="payflow">
+        <div class="payflow-step">
+          <div class="pfn">Step 01</div>
+          <h4>Quote <em>the job</em></h4>
+          <p>After diagnosing, you give the customer a price. Your number &mdash; we don't mark it up.</p>
+        </div>
+        <div class="payflow-step">
+          <div class="pfn">Step 02</div>
+          <h4>We invoice <em>the customer</em></h4>
+          <p>A Square invoice is sent on your behalf. The customer pays online &mdash; card, Apple Pay, or Google Pay.</p>
+        </div>
+        <div class="payflow-step">
+          <div class="pfn">Step 03</div>
+          <h4>You do <em>the work</em></h4>
+          <p>Show up, fix it, get the customer's sign-off when the job is complete.</p>
+        </div>
+        <div class="payflow-step">
+          <div class="pfn">Step 04</div>
+          <h4>You get <em>paid 80%</em></h4>
+          <p>Next business day, via Cash App. We hold the first job 48 hours to clear disputes &mdash; after that, it's same-next-day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GETTING STARTED ========== -->
+  <section id="how-it-works" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Getting Started</div>
+        <h2>From signup to <em>your first job.</em></h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Apply &amp; onboard</h3>
+          <p>Fill out the form below. We'll call you to verify your experience, set up your profile, and get you in front of customers.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Get job requests</h3>
+          <p>Customers in your service area request you directly &mdash; by name or via general repair posts we route to you.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Quote, work, get paid</h3>
+          <p>You quote the job, do the work, and we send 80% to your Cash App the next business day. Simple.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY MMF ========== -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Why Mechanics Stay</div>
+        <h2>Built by people who <em>actually wrench.</em></h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon">&#9733;</span>
+          <h4>You own the relationship</h4>
+          <p>Repeat customers are yours. We don't get in the middle of your business.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">$</span>
+          <h4>Zero risk to start</h4>
+          <p>No monthly fee. No setup cost. If you don't earn, you don't pay a dime.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">&rarr;</span>
+          <h4>Real local customers</h4>
+          <p>We focus on Cleveland &amp; Lake County. Tight geography means fewer dry leads.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">&#10003;</span>
+          <h4>We handle the money</h4>
+          <p>No collecting cash. No chasing customers. No bounced checks. You wrench, we pay you out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIGNUP ========== -->
   <section id="signup">
-    <h2>Mechanic Signup Form</h2>
-    <form action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
-      <!-- Hidden inputs for FormSubmit -->
-      <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
-      <input type="hidden" name="_subject" value="New Mechanic Signup">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+    <div class="container-narrow">
+      <div class="section-head text-center" style="margin: 0 auto 3rem;">
+        <div class="eyebrow" style="justify-content: center;">Mechanic Application</div>
+        <h2>Ready to <em>get started?</em></h2>
+        <p class="lead" style="margin: 1rem auto 0;">Fill out the form. We'll reach out within 24 hours to verify your details and walk you through onboarding.</p>
+      </div>
 
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="Full Name" required />
+      <div class="form-card">
+        <div class="form-meta">
+          <span>Form / 02</span>
+          <span>Mechanic Signup</span>
+        </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="Email" required />
+        <form class="styled" action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
+          <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
+          <input type="hidden" name="_subject" value="New Mechanic Signup">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="Phone Number" required />
+          <div>
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="Full Name" placeholder="John Smith" required />
+          </div>
 
-      <label for="experience">Experience & Specialties:</label>
-      <textarea id="experience" name="Experience & Specialties" rows="4" required></textarea>
+          <div class="form-row">
+            <div>
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="Email" placeholder="you@email.com" required />
+            </div>
+            <div>
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="Phone Number" placeholder="(216) 555-0100" required />
+            </div>
+          </div>
 
-      <button type="submit">Join the Platform</button>
-    </form>
-    <p class="after-form-note">
-      After you fill out the form, our team will reach out to you to complete your onboarding and answer any questions.
-    </p>
+          <div>
+            <label for="experience">Experience &amp; specialties</label>
+            <textarea id="experience" name="Experience &amp; Specialties" rows="5" placeholder="Years of experience, certifications, the kinds of work you specialize in, and what areas you serve..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block form-submit">
+            Submit application <span class="arrow">&rarr;</span>
+          </button>
+
+          <p class="form-hint" style="text-align: center; margin-top: 0.5rem;">
+            After you apply, our team will call you to finish onboarding and answer any questions.
+          </p>
+        </form>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-brand-mark">M</div>
+            <div class="nav-brand-text">
+              Mobile Mechanic Finder
+              <small>Find &middot; Book &middot; Fix</small>
+            </div>
+          </a>
+          <p>Connecting Cleveland and Lake County drivers with vetted mobile mechanics since 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>For Customers</h4>
+          <ul>
+            <li><a href="index.html#request">Request a mechanic</a></li>
+            <li><a href="all-mechanics.html">Browse mechanics</a></li>
+            <li><a href="rate.html">Rate a mechanic</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Mechanics</h4>
+          <ul>
+            <li><a href="onboarding.html">Join our team</a></li>
+            <li><a href="onboarding.html#pricing">Pay structure</a></li>
+            <li><a href="onboarding.html#payment-flow">How payment works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:2166002694">(216) 600-2694</a></li>
+            <li><a href="mailto:mobilemechanicfinder@gmail.com">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Mobile Mechanic Finder</span>
+        <span>Cleveland &middot; Lake County &middot; Ohio</span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

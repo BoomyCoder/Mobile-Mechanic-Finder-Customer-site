@@ -3,78 +3,219 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Mechanics - Mobile Mechanic Finder</title>
+  <title>All Mechanics — Mobile Mechanic Finder</title>
+  <meta name="description" content="Browse every mobile mechanic in the Mobile Mechanic Finder network serving Cleveland and Lake County, Ohio.">
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="all-mechanics.html">All Mechanics</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
-    </ul>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-mark">M</div>
+        <div class="nav-brand-text">
+          Mobile Mechanic Finder
+          <small>Find · Book · Fix</small>
+        </div>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-mechanics.html">Mechanics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="onboarding.html" class="nav-cta">Join as Mechanic</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header>
-    <h1>All Mechanics</h1>
-    <p>Browse all available mobile mechanics and see their reviews.</p>
-  </header>
-
-  <section id="all-mechanics">
-    <div class="mechanic-list">
-      <div class="mechanic-card">
-        <h3>Tyler's Auto Repair LLC (Non Mobile)</h3>
-        <p>⭐ 5.0(100 reviews)</p>
-        <p>Specialties: Electrical, Brakes, Diagnostics, Tune-Ups, Suspension</p>
-        <p>Service Location: South Euclid</p>
-        <a href="index.html?mechanic=Tyler's%20Auto%20Repair" class="request-button">Request Tyler</a>
-        <button onclick="rateMechanic('Tyler')">Rate This Mechanic</button>
+  <section class="hero" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="location-badge reveal reveal-1">
+        <span class="dot"></span>
+        Cleveland &amp; Lake County, OH
       </div>
-      <div class="mechanic-card">
-        <h3>Broken Auto Drive Repair</h3>
-        <p>⭐ 5.0 (50 reviews)</p>
-        <p>Specialties: Pads, rotors,
-          Starters,
-          Alternator,
-          Belts,
-          Tune-up,
-          Oil change,
-          Roadside,
-          Bearings,
-          And suspension</p>
-          <p>
-            Service Area: Cleveland East/West,
-            North Royalton,
-            Lorain,
-            Strongsville
-          </p>
-          <a href="index.html?mechanic=Broken%20Auto%20Drive%20Repair" class="request-button">Request Brian</a>
-        <button onclick="rateMechanic('Broken Auto Drive Repair')">Rate This Mechanic</button>
-      </div>
-      <div class="mechanic-card">
-        <h3>Rileys Autocare</h3>
-        <p>⭐ 5.0 (15 reviews)</p>
-        <p>Specialties: Tune-Ups, Starters, Batteries, Suspension </p>
-        <p>
-          Service Area: Euclid, Willoughby, Mentor, Willowick, Eastlake
-        </p>
-        <a href="index.html?mechanic=Rileys%20Autocare" class="request-button">Request Abigal</a>
-        <button onclick="rateMechanic('Rileys Autocare')">Rate This Mechanic</button>
-      </div>
-      <div class="mechanic-card">
-        <h3>David Kaleal</h3>
-        <p>⭐ 0 (0 reviews)</p>
-        <p>Specialties: Brakes, Headlight Bulbs, Starters</p>
-        <a href="index.html?mechanic=David%20Kaleal" class="request-button">Request David</a>
-        <button onclick="rateMechanic('David Kaleal')">Rate This Mechanic</button>
-      </div>
-
+      <h1 class="reveal reveal-2" style="max-width: 18ch;">
+        Every mechanic <span class="italic-accent">in the network.</span>
+      </h1>
+      <p class="lead reveal reveal-3" style="margin-top: 1.5rem;">
+        Browse, compare, and request the right mobile mechanic for the job. All independents. All reviewed by real local customers.
+      </p>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  <section id="all-mechanics" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="mechanics-grid">
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">Tyler's Auto Repair LLC</h3>
+            <span class="mechanic-card-tag featured">Featured</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">5.0</span>
+            <span>· 100 reviews</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Electrical, Brakes, Diagnostics, Tune-Ups, Suspension</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">South Euclid (non-mobile)</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <a href="index.html?mechanic=Tyler's%20Auto%20Repair" class="btn btn-primary btn-sm">Request Tyler</a>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('Tyler')">Rate</button>
+          </div>
+        </div>
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">Broken Auto Drive Repair</h3>
+            <span class="mechanic-card-tag featured">Featured</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">5.0</span>
+            <span>· 50 reviews</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Pads &amp; rotors, starters, alternators, belts, tune-ups, oil change, roadside, bearings, suspension</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">Cleveland East/West, North Royalton, Lorain, Strongsville</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <a href="index.html?mechanic=Broken%20Auto%20Drive%20Repair" class="btn btn-primary btn-sm">Request Brian</a>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('Broken Auto Drive Repair')">Rate</button>
+          </div>
+        </div>
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">Rileys Autocare</h3>
+            <span class="mechanic-card-tag featured">Featured</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">5.0</span>
+            <span>· 15 reviews</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Tune-Ups, Starters, Batteries, Suspension</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">Euclid, Willoughby, Mentor, Willowick, Eastlake</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <a href="index.html?mechanic=Rileys%20Autocare" class="btn btn-primary btn-sm">Request Abigal</a>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('Rileys Autocare')">Rate</button>
+          </div>
+        </div>
+
+        <div class="mechanic-card">
+          <div class="mechanic-card-header">
+            <h3 class="mechanic-card-name">David Kaleal</h3>
+            <span class="mechanic-card-tag">New</span>
+          </div>
+          <div class="rating">
+            <span class="rating-stars" style="color: var(--text-dim);">★★★★★</span>
+            <span class="rating-score">—</span>
+            <span>· No reviews yet</span>
+          </div>
+          <div class="mechanic-meta">
+            <div class="meta-row">
+              <span class="meta-label">Specialties</span>
+              <span class="meta-value">Brakes, Headlight Bulbs, Starters</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Service area</span>
+              <span class="meta-value">Cleveland metro</span>
+            </div>
+          </div>
+          <div class="mechanic-card-actions">
+            <a href="index.html?mechanic=David%20Kaleal" class="btn btn-primary btn-sm">Request David</a>
+            <button class="btn btn-ghost btn-sm" onclick="rateMechanic('David Kaleal')">Rate</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="join-cta" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="eyebrow" style="justify-content: center;">For Mechanics</div>
+        <h2>Want your business <em>on this page?</em></h2>
+        <p class="lead">Featured listing + direct customer requests + next-business-day Cash App payouts. Keep 80% of every job.</p>
+        <div class="price">
+          80%
+          <small>your cut · no monthly fees</small>
+        </div>
+        <div style="margin-top: 1.5rem;">
+          <a href="onboarding.html" class="btn btn-primary">Join Our Team <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-brand-mark">M</div>
+            <div class="nav-brand-text">
+              Mobile Mechanic Finder
+              <small>Find · Book · Fix</small>
+            </div>
+          </a>
+          <p>Connecting Cleveland and Lake County drivers with vetted mobile mechanics since 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>For Customers</h4>
+          <ul>
+            <li><a href="index.html#request">Request a mechanic</a></li>
+            <li><a href="all-mechanics.html">Browse mechanics</a></li>
+            <li><a href="rate.html">Rate a mechanic</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Mechanics</h4>
+          <ul>
+            <li><a href="onboarding.html">Join our team</a></li>
+            <li><a href="onboarding.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:2166002694">(216) 600-2694</a></li>
+            <li><a href="mailto:mobilemechanicfinder@gmail.com">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mobile Mechanic Finder</span>
+        <span>Cleveland · Lake County · Ohio</span>
+      </div>
+    </div>
   </footer>
 
   <script>

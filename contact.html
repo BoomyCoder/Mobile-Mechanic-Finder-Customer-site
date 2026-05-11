@@ -3,53 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Mobile Mechanic Finder</title>
+  <title>Contact Us — Mobile Mechanic Finder</title>
+  <meta name="description" content="Call, email, or message Mobile Mechanic Finder. We're here to help connect Cleveland drivers with great mobile mechanics.">
+
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="all-mechanics.html">All Mechanics</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="onboarding.html" target="_blank">Join Our Team</a></li>
-    </ul>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-mark">M</div>
+        <div class="nav-brand-text">
+          Mobile Mechanic Finder
+          <small>Find · Book · Fix</small>
+        </div>
+      </a>
+      <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="all-mechanics.html">Mechanics</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="onboarding.html" class="nav-cta">Join as Mechanic</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header>
-    <h1>Contact Us</h1>
-    <p>We're here to help! Call, email, or send us a message below.</p>
-  </header>
-
-  <section>
-    <h2>Call or Email</h2>
-    <p><strong>Phone:</strong> <a href="tel:2166002694">(216-600-2694)</a></p>
-    <p><strong>Email:</strong> <a href="mailto:mobilemechanicfinder@gmail.com">MobileMechanicFinder</a></p>
+  <section class="hero" style="padding-bottom: 3rem;">
+    <div class="container">
+      <div class="eyebrow reveal reveal-1">Get In Touch</div>
+      <h1 class="reveal reveal-2" style="max-width: 18ch;">
+        Questions? <span class="italic-accent">We're a call away.</span>
+      </h1>
+      <p class="lead reveal reveal-3" style="margin-top: 1.5rem;">
+        Whether you're a driver, a mechanic, or just want to know more about how Mobile Mechanic Finder works — reach out.
+      </p>
+    </div>
   </section>
 
-  <section>
-    <h2>Send a Message</h2>
-    <form action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
-      <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
-      <input type="hidden" name="_subject" value="New Customer Inquiry">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+  <section style="padding-top: 0;">
+    <div class="container-narrow">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="eyebrow">By Phone</div>
+          <span class="value"><a href="tel:2166002694">(216) 600-2694</a></span>
+          <p>Fastest way to reach us. Call or text anytime.</p>
+        </div>
+        <div class="contact-card">
+          <div class="eyebrow">By Email</div>
+          <span class="value"><a href="mailto:mobilemechanicfinder@gmail.com">mobilemechanicfinder@gmail.com</a></span>
+          <p>Best for detailed questions or paperwork.</p>
+        </div>
+      </div>
 
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="Name" required />
+      <div class="form-card">
+        <div class="form-meta">
+          <span>Form / 03</span>
+          <span>Send a Message</span>
+        </div>
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="Email" required />
+        <form class="styled" action="https://formsubmit.co/72c3ab61de92c145eb9644a1cd28299d" method="POST">
+          <input type="hidden" name="_next" value="https://boomycoder.github.io/Mobile-Mechanic-Finder-Customer-site/thankyou.html">
+          <input type="hidden" name="_subject" value="New Customer Inquiry">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="Message" rows="4" required></textarea>
+          <div class="form-row">
+            <div>
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="Name" placeholder="Jane Smith" required />
+            </div>
+            <div>
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="Email" placeholder="you@email.com" required />
+            </div>
+          </div>
 
-      <button type="submit">Send Message</button>
-    </form>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="5" placeholder="What's on your mind?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block form-submit">
+            Send message <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Mobile Mechanic Finder. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-brand-mark">M</div>
+            <div class="nav-brand-text">
+              Mobile Mechanic Finder
+              <small>Find · Book · Fix</small>
+            </div>
+          </a>
+          <p>Connecting Cleveland and Lake County drivers with vetted mobile mechanics since 2025.</p>
+        </div>
+        <div class="footer-col">
+          <h4>For Customers</h4>
+          <ul>
+            <li><a href="index.html#request">Request a mechanic</a></li>
+            <li><a href="all-mechanics.html">Browse mechanics</a></li>
+            <li><a href="rate.html">Rate a mechanic</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Mechanics</h4>
+          <ul>
+            <li><a href="onboarding.html">Join our team</a></li>
+            <li><a href="onboarding.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="tel:2166002694">(216) 600-2694</a></li>
+            <li><a href="mailto:mobilemechanicfinder@gmail.com">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Mobile Mechanic Finder</span>
+        <span>Cleveland · Lake County · Ohio</span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
